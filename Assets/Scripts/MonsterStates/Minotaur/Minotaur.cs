@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using States;
 
 public class Minotaur : MonoBehaviour {
 
     [SerializeField]
     public GameObject player;
     public GameObject minotaur;
+    
     public Action_state_rules[] Aggressive_actions;
     public Action_state_rules[] Defensive_actions;
 
-    private States.Defensive D_state;
-    private States.Aggressive A_state;
+    private Defensive D_state = new Defensive();
+    private Aggressive A_state = new Aggressive();
 
     public int health = 100;
     public float trigger_distance = 10f;
@@ -111,5 +113,6 @@ public class Minotaur : MonoBehaviour {
         state_checker();
         check_triggers();
         state_switcher();
+        Debug.Log("Defensive: " + state_defensive);
     }
 }

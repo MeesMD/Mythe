@@ -26,7 +26,8 @@ namespace States{
     {
         public override void state_update(Action_state_rules[] substates)
         {
-
+            int random_number = Random.Range(0, substates.Length);
+            substates[random_number].animate();
         }
     }
 
@@ -34,7 +35,8 @@ namespace States{
     {
         public override void state_update(Action_state_rules[] substates)
         {
-
+            int random_number = Random.Range(0, substates.Length);
+            substates[random_number].animate();
         }
     }
 
@@ -42,7 +44,8 @@ namespace States{
     {
         public override void state_update(Action_state_rules[] substates)
         {
-
+            int random_number = Random.Range(0, substates.Length);
+            substates[random_number].animate();
         }
     }
 
@@ -50,7 +53,8 @@ namespace States{
     {
         public override void state_update(Action_state_rules[] substates)
         {
-
+            int random_number = Random.Range(0, substates.Length);
+            substates[random_number].animate();
         }
     }
 }
