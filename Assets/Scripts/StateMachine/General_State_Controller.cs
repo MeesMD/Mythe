@@ -14,7 +14,7 @@ public class General_State_Controller : MonoBehaviour
     //public Action_state_rules[] Defensive_actions;
 
     //add possible states like this:
-    //private Defensive D_state = new Defensive();
+    //private Defensive D_state;
 
     public int health = 100;
     public float trigger_distance = 10f;
@@ -30,6 +30,9 @@ public class General_State_Controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //and assign the state like this:
+        // D_state = gameObject.AddComponent<Defensive>();
+
         state_passive = true;
     }
 

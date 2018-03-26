@@ -12,8 +12,8 @@ public class Minotaur : MonoBehaviour {
     public Action_state_rules[] Aggressive_actions;
     public Action_state_rules[] Defensive_actions;
 
-    private Defensive D_state = new Defensive();
-    private Aggressive A_state = new Aggressive();
+    private Defensive D_state;// = new Defensive();
+    private Aggressive A_state;// = new Aggressive();
 
     public int health = 100;
     public float trigger_distance = 10f;
@@ -29,7 +29,9 @@ public class Minotaur : MonoBehaviour {
 	void Start ()
     {
         state_passive = true;
-	}
+        D_state = gameObject.AddComponent<Defensive>();
+        A_state = gameObject.AddComponent<Aggressive>();
+    }
 	
     void check_if_passive()
     {
