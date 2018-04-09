@@ -25,7 +25,7 @@ public class PlayerAnim : MonoBehaviour {
         {
             anim.SetBool("isJumping", false);
         }
-        else
+        else if(!groundChecker.isGrounded())
         {
             anim.SetBool("isJumping", true);
         }

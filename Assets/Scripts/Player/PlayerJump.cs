@@ -32,6 +32,9 @@ public class PlayerJump : MonoBehaviour
         groundChecker.isGrounded();
 
         if (inputManager.Up() && groundChecker.isGrounded())
+
+        if (inputManager.Up())
+
             _rb.velocity = Vector2.up * _jumpVel;
 
         if (_rb.velocity.y < 0)

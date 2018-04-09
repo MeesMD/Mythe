@@ -7,6 +7,7 @@ public class GroundChecker : MonoBehaviour {
 
     private RaycastCreator raycastCreator;
     public bool isgrounded;
+    private bool canJump = false;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class GroundChecker : MonoBehaviour {
             isgrounded = false;
         }
     }
+
 
     public bool isGrounded()
     {
