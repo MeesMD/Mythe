@@ -7,7 +7,6 @@ public class RaycastCreator : MonoBehaviour {
 
     public int verticalRayCount = 3;
     private float verticalRaySpace;
-    private float rayLenght = 1f;
 
     public bool isGrounded;
     public LayerMask collisionMask;
@@ -45,7 +44,7 @@ public class RaycastCreator : MonoBehaviour {
         }
     }
 
-    public bool isgrounded()
+    public bool touchingFloor()
     {
         checkGround();
         return isGrounded;
