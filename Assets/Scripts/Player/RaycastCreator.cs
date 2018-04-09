@@ -47,7 +47,6 @@ public class RaycastCreator : MonoBehaviour {
 
     public bool isgrounded()
     {
-        print("Bool in raycast checked");
         checkGround();
         return isGrounded;
     }
