@@ -6,18 +6,32 @@ using UnityEngine;
 public class GroundChecker : MonoBehaviour {
 
     private RaycastCreator raycastCreator;
+    public bool isgrounded;
 
     void Start()
     {
-
+        if (!(raycastCreator = this.GetComponent<RaycastCreator>()))
+        {
+            raycastCreator = this.gameObject.AddComponent<RaycastCreator>();
+        }
     }
 
-    void Update()
+    void checkIfGrounded()
     {
-        if (raycastCreator.isgrounded())
+        if (raycastCreator.touchingFloor())
         {
-            print("Yeet");
+            isgrounded = true;
         }
+        else
+        {
+            isgrounded = false;
+        }
+    }
+
+    public bool isGrounded()
+    {
+        checkIfGrounded();
+        return isgrounded;
     }
     
 	

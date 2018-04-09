@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnim : MonoBehaviour {
 
     private InputManager inputManager;
+    private GroundChecker groundChecker;
     Animator anim;
 
 	void Start () {
@@ -12,15 +13,22 @@ public class PlayerAnim : MonoBehaviour {
 
         if (!(inputManager = this.GetComponent<InputManager>()))
             inputManager = this.gameObject.AddComponent<InputManager>();
+
+        if (!(groundChecker = this.GetComponent<GroundChecker>()))
+            groundChecker = this.gameObject.AddComponent<GroundChecker>();
     }
 	
 	
 	void Update () {
         //Jump
-       /* if (inputManager.Up())
+        if (groundChecker.isGrounded())
         {
-            anim.SetTrigger("Jump");
-        }*/
+            anim.SetBool("isJumping", false);
+        }
+        else
+        {
+            anim.SetBool("isJumping", true);
+        }
 
 
         //Walk

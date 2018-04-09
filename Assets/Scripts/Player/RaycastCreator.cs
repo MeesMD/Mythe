@@ -7,9 +7,9 @@ public class RaycastCreator : MonoBehaviour {
 
     public int verticalRayCount = 3;
     private float verticalRaySpace;
-    private float rayLenght = 1f;
+    private float rayLenght = 0.15f;
 
-    public bool isGrounded;
+    public bool isTouching;
     public LayerMask collisionMask;
     BoxCollider2D collider;
     RaycastOrigins raycastOrigins;
@@ -30,26 +30,25 @@ public class RaycastCreator : MonoBehaviour {
         for (int i = 0; i < verticalRayCount; i++)
         {
             Vector2 rayBegin = raycastOrigins.bottomLeft + Vector2.right * verticalRaySpace * i;
-            RaycastHit2D hit = Physics2D.Raycast(rayBegin, Vector2.down, collider.bounds.extents.y, collisionMask);
+            RaycastHit2D hit = Physics2D.Raycast(rayBegin, Vector2.down, rayLenght, collisionMask);
 
             Debug.DrawRay(rayBegin, Vector2.up * -2, Color.cyan);
 
             if (hit)
             {
-                isGrounded = true;
+                isTouching = true;
             }
             else
             {
-                isGrounded = false;
+                isTouching = false;
             }
         }
     }
 
-    public bool isgrounded()
+    public bool touchingFloor()
     {
-        print("Bool in raycast checked");
         checkGround();
-        return isGrounded;
+        return isTouching;
     }
 
     void UpdateRaycastOrigin()

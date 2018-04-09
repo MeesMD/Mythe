@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     private InputManager inputManager;
+    private GroundChecker groundChecker;
     private Rigidbody2D _rb;
     private float _jumpVel = 6;
     private float _gravity = 2.5f;
@@ -18,19 +19,24 @@ public class PlayerJump : MonoBehaviour
         {
             inputManager = this.gameObject.AddComponent<InputManager>();
         }
+
+        if (!(groundChecker = this.GetComponent<GroundChecker>()))
+        {
+            groundChecker = this.gameObject.AddComponent<GroundChecker>();
+        }
     }
 
 
     void Update()
     {
-        {
-            if (inputManager.Up())
-                _rb.velocity = Vector2.up * _jumpVel;
+        groundChecker.isGrounded();
 
-            if (_rb.velocity.y < 0)
-            {
-                _rb.velocity += Vector2.up * Physics2D.gravity.y * _gravity * Time.deltaTime;
-            }
+        if (inputManager.Up() && groundChecker.isGrounded())
+            _rb.velocity = Vector2.up * _jumpVel;
+
+        if (_rb.velocity.y < 0)
+        {
+            _rb.velocity += Vector2.up * Physics2D.gravity.y * _gravity * Time.deltaTime;
         }
     }
 }
