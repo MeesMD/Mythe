@@ -16,11 +16,15 @@ public class GroundChecker : MonoBehaviour {
         }
     }
 
-    void Update()
+   public void isGrounded()
     {
-        if (raycastCreator.isgrounded())
+        if (raycastCreator.touchingFloor())
         {
-            canJump = false;
+            print("On Ground");
+        }
+        else
+        {
+            print("In Air");
         }
     }
     
