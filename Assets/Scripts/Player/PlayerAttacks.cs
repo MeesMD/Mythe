@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour {
     BoxCollider2D bc;
+    InputManager inputManager;
     public float slash_size_x = 1.2f;
     public float slash_size_y = 1.1f;
     public float slash_duration = 0.4f;

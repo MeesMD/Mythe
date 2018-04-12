@@ -7,7 +7,7 @@ public class RaycastCreator : MonoBehaviour {
 
     public int verticalRayCount = 3;
     private float verticalRaySpace;
-    private float rayLenght = 0.15f;
+    private float rayLenght = 0.25f;
 
     public bool isTouching;
     public LayerMask collisionMask;
@@ -37,6 +37,7 @@ public class RaycastCreator : MonoBehaviour {
             if (hit)
             {
                 isTouching = true;
+                break;
             }
             else
             {
