@@ -17,12 +17,13 @@ public class RaycastCreator : MonoBehaviour {
     void Start()
     {
         collider = GetComponent<BoxCollider2D>();
-        CalculateRaySpacing();
+        
     }
 
     void Update()
     {
         UpdateRaycastOrigin();
+        CalculateRaySpacing();
     }
 
     public void checkGround()

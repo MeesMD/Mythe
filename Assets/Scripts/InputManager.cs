@@ -16,4 +16,9 @@ public class InputManager : MonoBehaviour {
     {
         return Input.GetKey("d");
     }
+
+    public bool Pause()
+    {
+        return Input.GetKeyDown("p");
+    }
 }
