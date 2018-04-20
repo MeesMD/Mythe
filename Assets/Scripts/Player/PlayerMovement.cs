@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private InputManager inputManager;
     private float _speedMult = 1;
     private float _speedDec  = 0.75f;
-    private float _maxSpeed  = 3;
+    private float _maxSpeed  = 5;
     private float _curSpeed  = 0;
 
     // Use this for initialization
