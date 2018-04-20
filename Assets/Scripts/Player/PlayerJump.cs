@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     private InputManager inputManager;
     private GroundChecker groundChecker;
     private Rigidbody2D _rb;
-    private float _jumpVel = 7.5f;
+    private float _jumpVel = 6f;
     private float _gravity = 2.5f;
 
     void Start()
