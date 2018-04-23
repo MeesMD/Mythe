@@ -4,7 +4,11 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
     public GameObject player;
+<<<<<<< HEAD
     public float offset;
+=======
+    public float offset = 3;
+>>>>>>> 5130a4d4c0afa80626b9423c219d5d017d978895
     private Vector3 playerPosition;
     public float offsetSmoothing = 3;
 

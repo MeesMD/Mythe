@@ -3,7 +3,35 @@ guid: 549104390eff02044a3b8e93f0e1caa0
 timeCreated: 1524128525
 licenseType: Free
 TextureImporter:
+<<<<<<< HEAD
   fileIDToRecycleName: {}
+=======
+  fileIDToRecycleName:
+    21300000: perseusattack2_0
+    21300002: perseusattack2_1
+    21300004: perseusattack2_2
+    21300006: perseusattack2_3
+    21300008: perseusattack2_4
+    21300010: perseusattack2_5
+    21300012: perseusattack2_6
+    21300014: perseusattack2_7
+    21300016: perseusattack2_8
+    21300018: perseusattack2_9
+    21300020: perseusattack2_10
+    21300022: perseusattack2_11
+    21300024: perseusattack2_12
+    21300026: perseusattack2_13
+    21300028: perseusattack2_14
+    21300030: perseusattack2_15
+    21300032: perseusattack2_16
+    21300034: perseusattack2_17
+    21300036: perseusattack2_18
+    21300038: perseusattack2_19
+    21300040: perseusattack2_20
+    21300042: perseusattack2_21
+    21300044: perseusattack2_22
+    21300046: perseusattack2_23
+>>>>>>> 5130a4d4c0afa80626b9423c219d5d017d978895
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +68,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> 5130a4d4c0afa80626b9423c219d5d017d978895
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +98,207 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: perseusattack2_0
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 521
+        width: 205
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_1
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 514
+        width: 254
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_3
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 516
+        width: 331
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_5
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 525
+        width: 388
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_7
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 523
+        width: 413
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_8
+      rect:
+        serializedVersion: 2
+        x: 3827
+        y: 523
+        width: 364
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 6
+        width: 526
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_11
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 0
+        width: 546
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_12
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 0
+        width: 558
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_14
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 6
+        width: 530
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_16
+      rect:
+        serializedVersion: 2
+        x: 3208
+        y: 1
+        width: 488
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_18
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 6
+        width: 450
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: perseusattack2_23
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 10
+        width: 67
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+>>>>>>> 5130a4d4c0afa80626b9423c219d5d017d978895
     outline: []
     physicsShape: []
   spritePackingTag: 
