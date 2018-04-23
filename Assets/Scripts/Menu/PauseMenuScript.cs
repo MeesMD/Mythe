@@ -15,9 +15,6 @@ public class PauseMenuScript : MonoBehaviour {
     {
         if (!(inputManager = this.GetComponent<InputManager>()))
             inputManager = this.gameObject.AddComponent<InputManager>();
-
-        if (!(pauseMenuShards = this.GetComponent<PauseMenuShards>()))
-            pauseMenuShards = this.gameObject.AddComponent<PauseMenuShards>();
     }
 	
 	void Update () {

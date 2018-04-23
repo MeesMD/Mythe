@@ -4,9 +4,9 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
     public GameObject player;
-    public float offset = 3;
+    public float offset = 4;
     private Vector3 playerPosition;
-    public float offsetSmoothing = 3;
+    public float offsetSmoothing = 1;
 
 
     void Update()
