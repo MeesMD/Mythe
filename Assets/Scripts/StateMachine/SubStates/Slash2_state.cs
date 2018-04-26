@@ -6,6 +6,7 @@ public class Slash2_state : Action_state_rules
 {
     public GameObject player;
     public GameObject enemy;
+    Animator walk_anim;
 
     private float distance_enemy_player;
     private bool is_at_melee_range;
@@ -17,11 +18,10 @@ public class Slash2_state : Action_state_rules
 
     public override void animate()
     {
-        //throw new System.NotImplementedException();
-        Debug.Log("This is slash2");
+        walk_anim = GetComponent<Animator>();
+
         distance_enemy_player = calc_x_distance(enemy, player);
-        StartCoroutine(walk_to_player(0.1f, distance_enemy_player));
-        Debug.Log("distance: " + distance_enemy_player);
+        StartCoroutine(walk_to_player(0.05f, distance_enemy_player));
     }
 
     public override void exit_state()
@@ -35,6 +35,7 @@ public class Slash2_state : Action_state_rules
         {
             if (!is_at_melee_range)
             {
+                walk_anim.SetBool("startWalkAnim", true);
                 enemy.transform.position = new Vector3(enemy.transform.position.x - speed, enemy.transform.position.y, enemy.transform.position.z);
             }
             is_at_melee_range = false;
@@ -44,6 +45,8 @@ public class Slash2_state : Action_state_rules
         {
             if (!is_at_melee_range)
             {
+                walk_anim.SetBool("startWalkAnim", true);
+                enemy.transform.localScale = new Vector2(-1, enemy.transform.localScale.y);
                 enemy.transform.position = new Vector3(enemy.transform.position.x + speed, enemy.transform.position.y, enemy.transform.position.z);
             }
             is_at_melee_range = false;
@@ -52,6 +55,7 @@ public class Slash2_state : Action_state_rules
         else
         {
             is_at_melee_range = true;
+            walk_anim.SetBool("startWalkAnim", false);
             yield return null;
         }
     }
