@@ -21,7 +21,7 @@ public class Slash2_state : Action_state_rules
         Debug.Log("This is slash2");
         distance_enemy_player = calc_x_distance(enemy, player);
         StartCoroutine(walk_to_player(0.1f, distance_enemy_player));
-        Debug.Log("distance: " + distance_enemy_player);
+        //Debug.Log("distance: " + distance_enemy_player);
     }
 
     public override void exit_state()

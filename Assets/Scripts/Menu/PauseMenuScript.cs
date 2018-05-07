@@ -9,7 +9,6 @@ public class PauseMenuScript : MonoBehaviour {
     public GameObject pauseMenuUI;
 
     private InputManager inputManager;
-    private PauseMenuShards pauseMenuShards;
 
     void Start()
     {
@@ -32,10 +31,9 @@ public class PauseMenuScript : MonoBehaviour {
         }
 	}
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
-        pauseMenuShards.randomShard();
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

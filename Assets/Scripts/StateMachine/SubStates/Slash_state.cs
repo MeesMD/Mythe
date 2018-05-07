@@ -20,7 +20,7 @@ public class Slash_state : Action_state_rules
         Debug.Log("This is slash");
         distance_enemy_player = calc_x_distance(enemy, player);
         StartCoroutine(walk_to_player(0.01f, distance_enemy_player));
-        Debug.Log("distance: " + distance_enemy_player);
+        //Debug.Log("distance: " + distance_enemy_player);
     }
 
     public override void exit_state()
