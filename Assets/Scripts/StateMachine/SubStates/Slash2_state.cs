@@ -23,7 +23,11 @@ public class Slash2_state : Action_state_rules
         enemy_width = enemy.transform.localScale.x;
 
         distance_enemy_player = calc_x_distance(enemy, player);
+        StartCoroutine(walk_to_player(0.1f, distance_enemy_player));
+        //Debug.Log("distance: " + distance_enemy_player);
+
         StartCoroutine(walk_to_player(0.05f, distance_enemy_player));
+
     }
 
     public override void exit_state()

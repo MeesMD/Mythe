@@ -9,15 +9,11 @@ public class PauseMenuScript : MonoBehaviour {
     public GameObject pauseMenuUI;
 
     private InputManager inputManager;
-    private PauseMenuShards pauseMenuShards;
 
     void Start()
     {
         if (!(inputManager = this.GetComponent<InputManager>()))
             inputManager = this.gameObject.AddComponent<InputManager>();
-
-        if (!(pauseMenuShards = this.GetComponent<PauseMenuShards>()))
-            pauseMenuShards = this.gameObject.AddComponent<PauseMenuShards>();
     }
 	
 	void Update () {
@@ -35,10 +31,9 @@ public class PauseMenuScript : MonoBehaviour {
         }
 	}
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
-        pauseMenuShards.randomShard();
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
