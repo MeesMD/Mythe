@@ -8,8 +8,7 @@ public class CollisionChecker : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Enemy")
         {
-            Debug.Log("hit");
-            coll.gameObject.SendMessage("ApplyDamage", 10, SendMessageOptions.RequireReceiver);
+            coll.gameObject.SendMessage("ApplyDamage", 20, SendMessageOptions.RequireReceiver);
         }
     }
 }

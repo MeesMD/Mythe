@@ -16,6 +16,7 @@ public class Minotaur : MonoBehaviour {
     private Aggressive A_state;// = new Aggressive();
 
     public int health = 100;
+    private bool vulnerable = false;
     public float trigger_distance = 10f;
 
     private bool state_passive;
@@ -46,7 +47,7 @@ public class Minotaur : MonoBehaviour {
 
     void check_if_aggressive()
     {
-        if (health > 20 && (trigger_left 
+        if (health > 0 && (trigger_left 
                             || trigger_right))
         {
             state_passive = false;
@@ -68,7 +69,7 @@ public class Minotaur : MonoBehaviour {
     void state_checker()
     {
         check_if_passive();
-        check_if_defensive();
+        //check_if_defensive();
         check_if_aggressive();
     }
 
@@ -109,11 +110,29 @@ public class Minotaur : MonoBehaviour {
         }
     }
 
+    void ApplyDamage(int damage)
+    {
+        if (vulnerable && health != 0)
+        {
+            health -= damage;
+            StartCoroutine(CantBeHit());
+            vulnerable = false;
+        }
+    }
+
     // Update is called once per frame
     void Update ()
     {
         state_checker();
         check_triggers();
         state_switcher();
+        Debug.Log(health);
+    }
+
+    IEnumerator CantBeHit()
+    {
+        
+        yield return new WaitForSeconds(.3f);
+        vulnerable = true;
     }
 }
