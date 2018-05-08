@@ -28,18 +28,28 @@ public class MonsterHealthManager : MonoBehaviour {
         switch (enemy_health)
         {
             case 80:
-               Destroy(h5);
+                Destroy(h5);
                 break;
             case 60:
+                Destroy(h5);
                 Destroy(h4);
                 break;
             case 40:
+                Destroy(h5);
+                Destroy(h4);
                 Destroy(h3);
                 break;
             case 20:
+                Destroy(h5);
+                Destroy(h4);
+                Destroy(h3);
                 Destroy(h2);
                 break;
             case 0:
+                Destroy(h5);
+                Destroy(h4);
+                Destroy(h3);
+                Destroy(h2);
                 Destroy(h1);
                 break;
         }
